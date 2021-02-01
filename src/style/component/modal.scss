@@ -1,0 +1,118 @@
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    .button {
+        padding: 1.2rem 2rem;
+        background-color: green;
+        color: white;
+        text-transform: uppercase;
+    }
+
+    .modal-wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        &.open {
+            visibility: visible;
+        }
+
+        .modal {
+            background-color: white;
+            height: 80vh;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-radius: 1rem;
+
+            .after-submit {
+                width: 80%;
+            }
+
+            @media (min-width: $tablet) {
+                width: 60%;
+                height: 60vh;
+            }
+
+            @media (min-width: $laptop) {
+                width: 40%;
+            }
+
+            .close {
+                position: absolute;
+                right: 1rem;
+                top: 1rem;
+            }
+
+            form {
+                width: 80%;
+                font-size: 0.8rem;
+                font-weight: 900;
+
+                .form-group {
+                    padding-top: 1.2rem;
+                    input,
+                    textarea {
+                        width: 100%;
+                        height: 2rem;
+                        background-color: #F4F5F8;
+                        border: none;
+                        margin-top: 0.4rem;
+                        border-radius: 0.2rem;
+                    }
+
+                    textarea {
+                        height: 4rem;
+                    }
+
+                    .countries {
+                        width: 50%;
+                        background-color: #F4F5F8;
+                        border: none;
+                        padding: 0.6rem 0.2rem;
+                        margin-top: 0.4rem;
+                    }
+
+                    .checkbox {
+                        width: auto!important;
+                    }
+                }
+
+                .submit {
+                    background-color: #6FE6B6;
+                    color: white;
+                    text-transform: white;
+                    border: none;
+                    width: 100%;
+                    padding: 1.2rem;
+                    text-align: center;
+                    border-radius: 0.2rem;
+                    margin-top: 2rem;
+                    float: right;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+}
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
